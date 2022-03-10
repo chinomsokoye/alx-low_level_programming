@@ -2,6 +2,7 @@
 
 /**
  * main - print to standard output
+ * but the outcome is a piece of art,
  * Return: 0 if exited, compiled without error
  */
 
