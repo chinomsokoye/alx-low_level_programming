@@ -27,7 +27,8 @@ int main(void)
 					putchar(' ');
 					putchar(th);
 					putchar(onth);
-					if (!((ten == '9' && one == '8') && (th == '9' && onth == '9')))
+					if (!((ten == '9' && one == '8') &&
+					      (th == '9' && onth == '9')))
 					{
 						putchar(',');
 						putchar(' ');
