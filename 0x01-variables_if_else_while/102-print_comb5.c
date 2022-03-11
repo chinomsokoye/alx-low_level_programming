@@ -18,7 +18,7 @@ int main(void)
 	{
 		for (one = '0'; one <= '9'; one++)
 		{
-			for (th = ten + 1; th <= '9'; th++)
+			for (th = ten; th <= '9'; th++)
 			{
 				for (onth = one + 1; onth <= '9'; onth++)
 				{
@@ -29,7 +29,7 @@ int main(void)
 					putchar(onth);
 
 					if (!((ten == '9' && one == '8') &&
-					      (th == '9' && onth == '8')))
+					      (th == '9' && onth == '9')))
 					{
 						putchar(',');
 						putchar(' ');
