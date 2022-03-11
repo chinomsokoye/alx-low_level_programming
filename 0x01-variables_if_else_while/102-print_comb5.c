@@ -9,25 +9,33 @@
 
 int main(void)
 {
-	int a;
-	int b;
+	int ten;
+	int one;
+	int th;
+	int onth;
 
-	for (a = 0; a <= 100; a++)
+	for (ten = '0'; ten <= '9'; ten++)
 	{
-		for (b = 0; b <= 100; b++)
+		for (one = '0'; one <= '9'; one++)
 		{
-			if (a < b)
+			for (th = ten + 1; th <= '9'; th++)
 			{
-				putchar((a / 10) + 48);
-				putchar((a % 10) + 48);
-				putchar(' ');
-				putchar((b / 10) + 48);
-				putchar((b % 10) + 48);
-				if (a != 98 || b != 99)
+				for (onth = one + 1; onth <= '9'; onth++)
 				{
-					putchar(',');
+					putchar(ten);
+					putchar(one);
 					putchar(' ');
+					putchar(th);
+					putchar(onth);
+
+					if (!((ten == '9' && one == '8') &&
+					      (th == '9' && onth == '8')))
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
+				onth = '0';
 			}
 		}
 	}
