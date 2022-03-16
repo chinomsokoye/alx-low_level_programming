@@ -1,43 +1,45 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _MAIN_H
+#define _MAIN_H
 
 #include <stdio.h>
 
 /**
- * positive_or_negative - test func, print if integer is positive or negative
- * @i: integer to print to standard output
- * Return: 0 if exited, compiled without error
+ * positive_or_negative - test function to print if integer is positive
+ * or negative numbers
+ * @i: integer
  */
 
 void positive_or_negative(int i);
 
 /**
-* largest_number - function to print largest number
-* @a: integer
-* @b: integer
-* @c: integer
-* Return: 0
+* largest_number - returns the largest of 3 number
+* @a: first integer
+* @b: second integer
+* @c: third integer
+* Return: largest number
 */
 
 int largest_number(int a, int b, int c);
 
 /**
- * print_remaining_days - function to print remaining day
- * @month: integer
- * @day: integer
- * @year: integer
- * Return: 0
+ * print_remaining_days - takes a date and prints how many days are
+ * left in the year, taking leap year into account
+ * @month: month in number format
+ * @day: day of month
+ * @year: year
+ * Return: void
  */
 
 void print_remaining_days(int month, int day, int year);
 
 /**
- * convert_day - function to convert day
- * @month: integer
- * @day: integer
- * Return: 0
+ * convert_day - convert day of month to day of year, without accounting
+ * for leap year
+ * @month: month in number format
+ * @day: day of month
+ * Return: day of year
  */
 
 int convert_day(int month, int day);
 
-#endif /* MAIN_H */
+#endif /* _MAIN_H */
