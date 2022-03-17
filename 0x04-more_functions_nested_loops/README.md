@@ -6,7 +6,7 @@
 
 * [Nested while loops](https://www.youtube.com/watch?v=Z3iGeQ1glss)
 * [C - Functions](https://www.tutorialspoint.com/cprogramming/c_functions.htm)
-* [Learning to Program in C Part 06(https://www.youtube.com/watch?v=qMlnFwYdqlw)
+* [Learning to Program in C (Part 06)](https://www.youtube.com/watch?v=qMlnFwYdqlw)
 
 ## General
 
