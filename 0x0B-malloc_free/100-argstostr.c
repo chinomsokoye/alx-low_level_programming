@@ -3,6 +3,21 @@
 #include <stdlib.h>
 
 /**
+ * _strlen - return string length
+ * @s: string
+ * Return: length
+ */
+
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (*s != 0)
+		len++, s++;
+	return (len);
+}
+
+/**
  * argstostr - concatenates all argument of a program
  * @ac: argument count
  * @av: argument vector
@@ -11,44 +26,36 @@
 
 char *argstostr(int ac, char **av)
 {
-	int size;
 	char *s;
-	int i;
-	int j;
-	int k;
+	int len = 0, i, j, k = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	i = 0;
 	while (i < ac)
 	{
-		j = 0;
-		while (av[i][j] != '\0')
-		{
-			size++;
-			j++;
-		}
+		len += _strlen(av[i]);
 		i++;
 	}
-	size += (ac + 1);
-	s = malloc(sizeof(char) * size);
+	len += (ac + 1);
+	s = malloc(len * sizeof(char));
+
 	if (s == NULL)
+	{
+		free(s);
 		return (NULL);
-	k = 0;
+	}
 	i = 0;
 	while (i < ac)
 	{
 		j = 0;
-		while (av[i][j] != '\0')
+		while (j < _strlen(av[i]))
 		{
-			s[k] = av[i][j];
+			s[k++] = av[i][j];
 			j++;
-			k++;
 		}
-		s[k] = '\n';
+		s[k++] = '\n';
 		i++;
-		k++;
 	}
-	s[k] = '\0';
 	return (s);
 }
