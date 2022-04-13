@@ -1,5 +1,6 @@
-#include <stddef.h>
-/* define standard size_t */
+#include <stdio.h>
+#include <stdlib.h>
+#include "function_pointers.h"
 
 /**
  * array_iterator - execute a function given as parameter on each element of an
@@ -11,15 +12,14 @@
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	size_t i;
+	unsigned int i;
 
-	if (array != NULL && action != NULL)
+	if (array == NULL && action == NULL)
+		exit(98);
+	i = 0;
+	while (i < size)
 	{
-		i = 0;
-		while (i < size)
-		{
-			action(*(array + 1));
-			i++;
-		}
+		action(array[i]);
+		i++;
 	}
 }
