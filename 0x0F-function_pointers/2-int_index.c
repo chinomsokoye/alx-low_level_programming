@@ -1,6 +1,5 @@
 #include "function_pointers.h"
-#include <stdlib.h>
-#include <stdio.h>
+#include <stddef.h>
 
 /**
  * int_index - searches for ana iinteger
@@ -14,12 +13,12 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 
-	if (size <= 0 || array == NULL || cmp == NULL)
+	if (array == NULL || cmp == NULL || size <= 0)
 		return (-1);
 	i = 0;
 	while (i < size)
 	{
-		if (cmp(array[i]))
+		if (cmp(*(array + 1)))
 			return (i);
 		i++;
 	}
