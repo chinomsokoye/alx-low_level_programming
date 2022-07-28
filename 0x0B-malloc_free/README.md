@@ -17,4 +17,4 @@
 * What is the difference between automatic and dynamic allocation
 * What is **_malloc_** and **_free_** and how to use them
 * Why and when to use **_malloc_**
-* How to use **valgrind** to check for memory leak
+* How to use **_valgrind_** to check for memory leak
