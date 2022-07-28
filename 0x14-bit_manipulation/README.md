@@ -7,7 +7,7 @@
 * [Google](https://www.google.com)
 * [Youtube](https://www.youtube.com)
 
-## General
+## General Learning
 
 * Look for the right source of information without too much help
 * How to manipulate bits and use bitwise operators
