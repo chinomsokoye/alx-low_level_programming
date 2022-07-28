@@ -2,11 +2,13 @@
 
 ## Concepts
 
+**Read or watch:**
+
 * [Pointers and arrays](https://www.alx-intranet.hbtn.io/concepts/60)
 * [C - Pointer to Pointer](https://www.tutorialspoint.com/cprogramming/c_pointer_to_pointer.htm)
 * [Multi-dimensional arrays in C](https://www.tutorialspoint.com/cprogramming/c_multi_dimensional_arrays.htm)
 
-## General
+## General Learning
 
 * What are pointers to pointers and how to use them
 * What are multidimensional arrays and how to use them
