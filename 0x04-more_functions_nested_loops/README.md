@@ -8,7 +8,7 @@
 * [C - Functions](https://www.tutorialspoint.com/cprogramming/c_functions.htm)
 * [Learning to Program in C (Part 06)](https://www.youtube.com/watch?v=qMlnFwYdqlw)
 
-## General
+## General Learning
 
 * What are nested loops and how to use them
 * What is function and how do you use functions
