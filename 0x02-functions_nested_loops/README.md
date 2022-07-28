@@ -2,11 +2,13 @@
 
 ## Resources
 
+**Read or watch:**
+
 * [C - Functions](www.tutorialspoint.com/cprogramming/c_functions.htm)
 * [What is the purpose of a function prototype](www.geeksforgeeks.org/what-is-the-purpose-of-a-function-prototype/)
 * [C - Header Files](www.tutorialspoint.com/cprogramming/c_header_files.htm)
 
-## General
+## General Learning
 
 * What are _nested loops_ and how to use them
 * What is a _function_ and how to use functions
