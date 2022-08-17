@@ -1,3 +1,7 @@
+# Build executable for school using all rules
+# Variables: CC=compiler to be used, SRC:.c files
+# OBJ:.o file, NAME of the executable
+# The all rule should recompile only the updated source files
 CC=gcc
 SRC=main.c school.c
 OBJ=$(SRC:.c=.o)
