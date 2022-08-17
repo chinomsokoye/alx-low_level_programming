@@ -1,6 +1,7 @@
 # Build executable for school
 # Variables CC=compiler to be used
 # SRC:.c files
+
 CC=gcc
 SRC=main.c school.c
 
