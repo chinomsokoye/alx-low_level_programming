@@ -1,0 +1,33 @@
+# Build executable file school with the all rule
+# The all rule should recompile only the updated files
+# Rules: all: builds executable, oclean: deletes the object files
+# The clean: delete all EMACS and VIM temp files along with the executable
+# The fclean: delete all EMACS and VIM temp files, the executable, and
+# the object files
+# The re: forces recompilation of all source files
+# Variables: CC: compiler to be used, SRC: .c files, OBJ: .o files
+# NAME: name of executable, RM: the program files to delete
+# CFLAGS: favorite compiler flags: -Wall -Werror- Wextra -pedantic
+
+CC=gcc
+SRC=main.c school.c
+OBJ=$(SRC:.c=.o)
+NAME=school
+RM=-rm -f
+CFLAGS=-Wall -Werror- Wextra -pedantic
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: oclean all
