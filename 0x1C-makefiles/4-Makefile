@@ -9,14 +9,14 @@
 # NAME: name of executable, RM: the program files to delete
 # CFLAGS: favorite compiler flags: -Wall -Werror- Wextra -pedantic
 
-CC=gcc
-SRC=main.c school.c
-OBJ=$(SRC:.c=.o)
-NAME=school
-RM=-rm -f
-CFLAGS=-Wall -Werror- Wextra -pedantic
+CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+CFLAGS = -Wall -Werror- Wextra -pedantic
 
-all: $(OBJ)
+all: m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
