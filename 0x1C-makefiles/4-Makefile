@@ -14,9 +14,9 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
-CFLAGS = -Wall -Werror- Wextra -pedantic
+CFLAGS = -Wall -Werror- Wextra -pedantic -std=gnu89
 
-all: m.h $(OBJ)
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
