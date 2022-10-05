@@ -1,36 +1,35 @@
 #include "search_algos.h"
 
 /**
- * jump_list - searches using the jump list
+ * linear_skip - searches using the linear skip
  * @list: Pointer to the list to search in
- * @size: Number in array
  * @value: Value to search
  * Return: NULL, value location
  */
-listint_t *jump_list(listint_t *list, size_t size, int value)
+skiplist_t *linear_skip(skiplist_t *list, int value)
 {
-	listint_t *node, *size;
+	skiplist_t *node, *jump;
 
 	if (!list)
 		return (NULL);
-	for (node = size = list; size->next && size->n < value;)
+	for (node = jump = list; jump->next && jump->n < value;)
 	{
-		node = size;
-		if (size->next)
+		node = jump;
+		if (jump->express)
 		{
-			size = size->next;
+			jump = jump->express;
 			printf("Value checked at index [%ld] = [%d]\n",
-			       size->index, size->n);
+			       jump->index, jump->n);
 		}
 		else
 		{
-			while (size->next)
-				size = size->next;
+			while (jump->next)
+				jump = jump->next;
 		}
 	}
 	printf("Value found between indexes [%ld] and [%ld]\n",
-	       node->index, size->index);
-	for (; node->index < size->index && node->n < value; node = node->next)
+	       node->index, jump->index);
+	for (; node->index < jump->index && node->n < value; node = node->next)
 		printf("Value checked at index [%ld] = [%d]\n",
 		       node->index, node->n);
 	printf("Value checked at index [%ld] = [%d]\n", node->index, node->n);
