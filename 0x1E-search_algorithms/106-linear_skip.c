@@ -4,7 +4,7 @@
  * linear_skip - searches using the linear skip
  * @list: Pointer to the list to search in
  * @value: Value to search
- * Return: NULL, value location
+ * Return: NULL, value location of index
  */
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
